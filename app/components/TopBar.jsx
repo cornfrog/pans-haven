@@ -15,6 +15,7 @@ const TopBar = () => {
                     width={500}
                     height={500}
                     alt="Pans Haven Logo"
+                    className="topbar__name-and-logo__logo"
                 />
             </div>
             <NavBar />
@@ -45,7 +46,7 @@ const MobileNavBar = () => {
 
     return (
         <div className="topbar__navbar-mobile">
-            <button onClick={toggleNavBar} >{!displayingMenu ? <>&#x2630;</> : <>&#x2715;</>}</button>
+            <button onClick={toggleNavBar} className="topbar__navbar-mobile__toggle" >{!displayingMenu ? <>&#x2630;</> : <>&#x2715;</>}</button>
             <div className={`topbar__navbar-mobile__menu ${!displayingMenu ? "hide" : "show "}`}>
                 <a href="#Home" className="topbar__navbar-mobile__menu__link">Home</a>
                 <a href="#Charities" className="topbar__navbar-mobile__menu__link">Charities</a>

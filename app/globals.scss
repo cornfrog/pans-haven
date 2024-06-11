@@ -1,0 +1,145 @@
+@import url('https://fonts.cdnfonts.com/css/cry-uncial');
+@import url('https://fonts.cdnfonts.com/css/rem');
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.topbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__name-and-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10rem;
+        width: 100vw;
+
+        &__name {
+            font-size: 4rem;
+            font-family: 'Cry Uncial', sans-serif;
+        }
+
+        &__logo {
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+        }
+
+    }
+
+    &__navbar-default {
+        margin: 1rem 0;
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        &__link {
+            font-size: 1.5rem;
+            color: black;
+            text-decoration: none;
+        }
+    }
+
+    &__navbar-mobile {
+        display: none;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 860px) {
+    .topbar {
+        &__name-and-logo {
+            gap: 5rem;
+
+            &__name {
+                font-size: 3rem;
+                font-family: 'Cry Uncial', sans-serif;
+            }
+
+            &__logo {
+                height: 150px;
+                width: 150px;
+                border-radius: 100%;
+            }
+        }
+
+        &__navbar-default {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .topbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        &__name-and-logo {
+            justify-content: space-evenly;
+            gap: 0;
+
+            &__name {
+                font-size: 2rem;
+                font-family: 'Cry Uncial', sans-serif;
+            }
+
+            &__logo {
+                height: 100px;
+                width: 100px;
+                border-radius: 100%;
+            }
+        }
+
+        &__navbar-default {
+            display: none;
+        }
+
+        &__navbar-mobile {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            &__toggle {
+                background-color: transparent;
+                border: none;
+                font-size: 2.5rem;
+            }
+
+            &__menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                transition: height .5s ease-in-out;
+
+                &__link {
+                    font-size: 1.25rem;
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+
+            .show {
+                overflow: hidden;
+                height: 9rem;
+            }
+
+            .hide {
+                height: 0rem;
+                overflow: hidden;
+            }
+        }
+    }
+}
