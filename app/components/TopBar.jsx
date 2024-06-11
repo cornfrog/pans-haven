@@ -28,10 +28,10 @@ const TopBar = () => {
 const NavBar = () => {
     return (
         <div className="topbar__navbar-default">
-            <Link href="#Home" className="topbar__navbar-default__link">Home</Link>
-            <Link href="#Charities" className="topbar__navbar-default__link">Charities</Link>
-            <Link href="#About-Us" className="topbar__navbar-default__link">About Us</Link>
-            <Link href="#Contact-Us" className="topbar__navbar-default__link">Contact Us</Link>
+            <Link href="/" className="topbar__navbar-default__link">Home</Link>
+            <Link href="/Charities" className="topbar__navbar-default__link">Charities</Link>
+            <Link href="/About-Us" className="topbar__navbar-default__link">About Us</Link>
+            <Link href="/Contact-Us" className="topbar__navbar-default__link">Contact Us</Link>
         </div>
     )
 }
@@ -48,10 +48,10 @@ const MobileNavBar = () => {
         <div className="topbar__navbar-mobile">
             <button onClick={toggleNavBar} className="topbar__navbar-mobile__toggle" >{!displayingMenu ? <>&#x2630;</> : <>&#x2715;</>}</button>
             <div className={`topbar__navbar-mobile__menu ${!displayingMenu ? "hide" : "show "}`}>
-                <a href="#Home" className="topbar__navbar-mobile__menu__link">Home</a>
-                <a href="#Charities" className="topbar__navbar-mobile__menu__link">Charities</a>
-                <a href="#About-Us" className="topbar__navbar-mobile__menu__link">About Us</a>
-                <a href="#Contact-Us" className="topbar__navbar-mobile__menu__link">Contact Us</a>
+                <a href="/" className="topbar__navbar-mobile__menu__link">Home</a>
+                <a href="/Charities" className="topbar__navbar-mobile__menu__link">Charities</a>
+                <a href="/About-Us" className="topbar__navbar-mobile__menu__link">About Us</a>
+                <a href="/Contact-Us" className="topbar__navbar-mobile__menu__link">Contact Us</a>
             </div>
         </div>
     );
