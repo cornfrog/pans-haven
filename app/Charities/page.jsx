@@ -5,4 +5,4 @@ const Charities = () => {
         </div>
     )
 }
-export default AboutUs;
+export default Charities;
