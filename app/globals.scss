@@ -8,6 +8,7 @@ body {
     width: 100vw;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    font-family: 'REM', sans-serif;
 }
 
 .topbar {
@@ -61,7 +62,8 @@ body {
     &__container {
         display: flex;
         overflow: hidden;
-        &__image { 
+
+        &__image {
             flex-grow: 0;
             flex-shrink: 0;
             object-fit: cover;
@@ -71,19 +73,31 @@ body {
             transition: translate 300ms ease-in-out;
         }
     }
-    
+
 
     &__button {
         position: absolute;
         top: 0;
         bottom: 0;
-        display: block ;
+        display: block;
         color: white;
         background-color: transparent;
         border: none;
         padding: 0 1rem;
         font-size: 2.5rem;
     }
+}
+
+.title {
+    font-family: 'Cry Uncial', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+}
+
+.mission-statement {
+    margin: .5rem auto;
+    width: 80%;
+    font-size: 1.25rem;
 }
 
 @media (min-width: 600px) and (max-width: 860px) {
@@ -106,6 +120,10 @@ body {
         &__navbar-default {
             width: 80%;
         }
+    }
+
+    .title {
+        font-size: 2.5rem;
     }
 }
 
@@ -178,5 +196,11 @@ body {
                 overflow: hidden;
             }
         }
+    }
+    .title {
+        font-size: 2rem;
+    }
+    .mission-statement {
+        font-size: 1rem;
     }
 }
