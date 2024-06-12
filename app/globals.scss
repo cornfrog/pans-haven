@@ -55,6 +55,37 @@ body {
     }
 }
 
+.carousel {
+    position: relative;
+
+    &__container {
+        display: flex;
+        overflow: hidden;
+        &__image { 
+            flex-grow: 0;
+            flex-shrink: 0;
+            object-fit: cover;
+            max-height: 25rem;
+            width: 100vw;
+            display: block;
+            transition: translate 300ms ease-in-out;
+        }
+    }
+    
+
+    &__button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: block ;
+        color: white;
+        background-color: transparent;
+        border: none;
+        padding: 0 1rem;
+        font-size: 2.5rem;
+    }
+}
+
 @media (min-width: 600px) and (max-width: 860px) {
     .topbar {
         &__name-and-logo {
@@ -120,6 +151,7 @@ body {
 
             &__menu {
                 position: absolute;
+                z-index: 2;
                 top: 10rem;
                 width: 100vw;
                 display: flex;
