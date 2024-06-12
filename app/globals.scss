@@ -87,10 +87,11 @@ body {
 
         &__name-and-logo {
             justify-content: space-evenly;
-            gap: 0;
+            gap: .5rem;
 
             &__name {
-                font-size: 2rem;
+                text-wrap: nowrap;
+                font-size: 2.25rem;
                 font-family: 'Cry Uncial', sans-serif;
             }
 
@@ -114,15 +115,19 @@ body {
             &__toggle {
                 background-color: transparent;
                 border: none;
-                font-size: 2.5rem;
+                font-size: 1.75rem;
             }
 
             &__menu {
+                position: absolute;
+                top: 10rem;
+                width: 100vw;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-evenly;
                 align-items: center;
                 transition: height .5s ease-in-out;
+                background-color: rgba(200, 200, 208, 0.597);
 
                 &__link {
                     font-size: 1.25rem;
@@ -133,7 +138,7 @@ body {
 
             .show {
                 overflow: hidden;
-                height: 9rem;
+                height: 10rem;
             }
 
             .hide {
